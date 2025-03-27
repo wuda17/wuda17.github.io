@@ -1,18 +1,35 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { Portfolio } from "@/data/portfolio";
+import { ImageViewer } from "./image-viewer";
 
 export function PortfolioEntry({ portfolio }: { portfolio: Portfolio }) {
+  const [isImageViewerOpen, setIsImageViewerOpen] = useState(false);
+
   return (
     <div className="flex flex-col sm:flex-row gap-6">
       {portfolio.imageUrl && (
         <div className="w-1/4 min-w-[160px] relative">
-          <Image
-            src={portfolio.imageUrl}
+          <div 
+            className="cursor-pointer hover:opacity-90 transition-opacity"
+            onClick={() => setIsImageViewerOpen(true)}
+          >
+            <Image
+              src={portfolio.imageUrl}
+              alt={portfolio.title}
+              width={160}
+              height={200}
+              className="rounded-lg"
+            />
+          </div>
+          <ImageViewer 
+            isOpen={isImageViewerOpen}
+            imageUrl={portfolio.imageUrl}
             alt={portfolio.title}
-            width={160}
-            height={200}
-            className="rounded-lg"
+            onClose={() => setIsImageViewerOpen(false)}
           />
         </div>
       )}

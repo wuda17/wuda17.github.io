@@ -1,22 +1,39 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { Publication } from "@/data/publication";
+import { ImageViewer } from "./image-viewer";
 
 export function PublicationEntry({
   publication,
 }: {
   publication: Publication;
 }) {
+  const [isImageViewerOpen, setIsImageViewerOpen] = useState(false);
+
   return (
     <div className="flex flex-col sm:flex-row gap-6">
       {publication.imageUrl && (
         <div className="w-full sm:w-1/4 min-w-[160px] relative">
-          <Image
-            src={publication.imageUrl}
+          <div 
+            className="cursor-pointer hover:opacity-90 transition-opacity"
+            onClick={() => setIsImageViewerOpen(true)}
+          >
+            <Image
+              src={publication.imageUrl}
+              alt={publication.title}
+              width={160}
+              height={200}
+              className="rounded-lg transition-all duration-300"
+            />
+          </div>
+          <ImageViewer 
+            isOpen={isImageViewerOpen}
+            imageUrl={publication.imageUrl}
             alt={publication.title}
-            width={160}
-            height={200}
-            className="rounded-lg transition-all duration-300"
+            onClose={() => setIsImageViewerOpen(false)}
           />
         </div>
       )}
