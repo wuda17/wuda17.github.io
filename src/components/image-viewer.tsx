@@ -14,7 +14,6 @@ export function ImageViewer({ isOpen, imageUrl, alt, onClose }: ImageViewerProps
   
   useEffect(() => {
     if (isOpen) {
-      // Small timeout to ensure the animation works correctly
       setTimeout(() => {
         setAnimationClass('opacity-100 scale-100');
       }, 10);
@@ -23,7 +22,6 @@ export function ImageViewer({ isOpen, imageUrl, alt, onClose }: ImageViewerProps
     }
   }, [isOpen]);
 
-  // Close on escape key press
   useEffect(() => {
     if (!isOpen) return;
     
@@ -54,4 +52,4 @@ export function ImageViewer({ isOpen, imageUrl, alt, onClose }: ImageViewerProps
       </div>
     </div>
   );
-} 
+}
