@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Noto_Serif, PT_Serif } from "next/font/google";
 import "./globals.css";
 import { aboutMe } from "@/data/aboutme";
+import Link from "next/link";
 import { customMetadata } from "@/data/title-description";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -63,10 +64,14 @@ export default function RootLayout({
                   href="https://github.com/tovacinni/research-website-template"
                   className="underline hover:text-neutral-800 dark:hover:text-neutral-300 transition-colors"
                 >
-                  research-website-template
+                  tovacinni&apos;s template
                 </a>
               </p>
             </div>
+            <nav className="mb-4">
+              <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 text-sm text-neutral-600 dark:text-neutral-400">
+              </ul>
+            </nav>
           </div>
         </footer>
       </body>

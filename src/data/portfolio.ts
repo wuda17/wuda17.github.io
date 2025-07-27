@@ -8,15 +8,21 @@ export interface Portfolio {
 }
 
 export const portfolioData: Portfolio[] = [
-  // Example entry
   {
-    title: "Causal Discovery Framework",
+    title: "Loop",
     description:
-      "A framework for discovering causal relationships in high-dimensional time series data using state-of-the-art machine learning techniques.",
-    technologies: ["Python", "PyTorch", "React"],
-    projectUrl: "https://project-demo.com",
-    imageUrl:
-      "https://images.unsplash.com/photo-1561622539-dffbfc2008fd?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    codeUrl: "https://github.com/username/project",
+      "Developed a hybrid lane-keeping and person-following ROS2 autonomy stack, achieving 100% lap completion and 40% smoother steering in outdoor environments using ZED2 stereo vision.",
+    codeUrl: "https://github.com/wuda17/loop",
+    projectUrl: "/loop",
+    imageUrl: "/loop.png",
+    technologies: ["ROS2", "Python", "C++"],
+  },
+  {
+    title: "Sprint",
+    description:
+      "Used transformer-generated embeddings to inform neural network and clustering-based recommendations on 270,000+ scraped Devpost projects in PyTorch.",
+    codeUrl: "https://github.com/TheSprintTeam/techstack-torch",
+    projectUrl: "https://github.com/TheSprintTeam",
+    technologies: ["PyTorch"],
   },
 ];

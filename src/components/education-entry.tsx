@@ -15,7 +15,7 @@ export function EducationEntry({ education }: { education: Education }) {
           )}
           {education.thesis && (
             <p className="text-sm text-zinc-500 mt-2 italic">
-              Thesis:{" "}
+              {" "}
               {education.thesisUrl ? (
                 <a
                   href={education.thesisUrl}

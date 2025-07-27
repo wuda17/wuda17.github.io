@@ -7,18 +7,27 @@ export function ExperienceEntry({ experience }: { experience: Experience }) {
       <div className="col-span-3 flex flex-col">
         <h3 className="text-base font-serif">
           {experience.title} —{" "}
-          {experience.companyUrl ? (
-            <a
-              href={experience.companyUrl}
-              className="hover:text-zinc-600 transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {experience.company}
-            </a>
-          ) : (
-            experience.company
-          )}
+          <div className="flex items-center">
+            {experience.companyLogo && (
+              <img
+                src={experience.companyLogo}
+                alt={`${experience.company} logo`}
+                className="w-4 h-4 mr-2"
+              />
+            )}
+            {experience.companyUrl ? (
+              <a
+                href={experience.companyUrl}
+                className="hover:text-zinc-600 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {experience.company}
+              </a>
+            ) : (
+              experience.company
+            )}
+          </div>
         </h3>
         {experience.advisor && (
           <p className="text-sm text-zinc-600 leading-relaxed italic mt-2">
@@ -31,9 +40,10 @@ export function ExperienceEntry({ experience }: { experience: Experience }) {
           </p>
         )}
         {experience.description && (
-          <p className="text-sm text-zinc-600 leading-relaxed mt-2">
-            {experience.description}
-          </p>
+          <p
+            className="text-sm text-zinc-600 leading-relaxed mt-2"
+            dangerouslySetInnerHTML={{ __html: experience.description }}
+          />
         )}
       </div>
     </div>

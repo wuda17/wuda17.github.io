@@ -6,25 +6,48 @@ export interface Experience {
   advisor?: string;
   manager?: string;
   companyUrl?: string;
+  companyLogo?: string;
 }
 
 export const experienceData: Experience[] = [
   {
-    date: "Summer 2023",
+    date: "May 2025 - Aug 2025",
     title: "Research Intern",
-    company: "DeepMind",
+    company: "dConstruct Robotics",
     description:
-      "Developed novel algorithms for causal structure learning in reinforcement learning settings",
-    advisor: "Peter Wang",
-    companyUrl: "https://deepmind.com",
+      "Boosted 3D reconstruction fidelity by <b>30%</b>, accelerated pre-processing by <b>300%+</b>, and enabled large-scene processing.",
+    companyUrl: "https://dconstruct.co",
+    companyLogo: "/dconstruct.jpg",
   },
   {
-    date: "Summer 2022",
-    title: "Research Intern",
-    company: "Google Research",
+    date: "Jan 2024 - Apr 2024, Sep 2024 - Dec 2024",
+    title: "Perception Engineering Intern",
+    company: "Clearpath Robotics by Rockwell Automation",
     description:
-      "Worked on improving robustness of large language models to distribution shifts",
-    manager: "Elise Brown",
-    companyUrl: "https://google.com",
+      "Cut robot localization search times and RAM by <b>10x</b>, and automating 3D pointcloud regression testing from <b>9 hours to 8 minutes</b>.",
+    companyUrl: "https://clearpathrobotics.com",
+    companyLogo: "/clearpath.png",
+  },
+  {
+    date: "Apr 2024 - Dec 2024",
+    title: "Research Associate",
+    company: "Vision and Image Processing Lab",
+    description: "Led self-supervised learning research for insect classification and engineered a scalable dataset pipeline, processing <b>5M+</b> records.",
+    companyLogo: "/uw.png",
+    },
+  {
+    date: "May 2023 - Aug 2023",
+    title: "Software Engineering Intern",
+    company: "Genesys",
+    description: "Developed an integration microservice, bringing in <b>2 new corporate clients</b>, and reduced API costs by <b>90%</b>.",
+    companyUrl: "https://www.genesys.com/",
+    companyLogo: "/genesys.png",
+  },
+  {
+    date: "Sep 2022 - Dec 2022",
+    title: "Backend Engineering Intern",
+    company: "Manorlead",
+    companyLogo: "/manorlead.jpeg",
+    description:"Architected scalable RESTful APIs, enabling <b>10%</b> weekly userbase growth, and optimized search bar matching efficiency by <b>25%</b>.",
   },
 ];

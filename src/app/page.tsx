@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import { EducationEntry } from "@/components/education-entry";
 import { educationData } from "@/data/education";
 import { PublicationEntry } from "@/components/publication-entry";
@@ -13,6 +15,7 @@ import { portfolioData } from "@/data/portfolio";
 import { sectionOrder, Section } from "@/data/section-order";
 
 export default function Home() {
+  const [showAllExperiences, setShowAllExperiences] = useState(false);
   return (
     <div className="min-h-screen bg-[#FFFCF8]">
       {/* Don't have a great call on whether max-w-screen-xl is better */}
@@ -96,6 +99,9 @@ export default function Home() {
                     )
                   );
                 case Section.Experience:
+                  const experiencesToShow = showAllExperiences
+                    ? experienceData
+                    : experienceData.slice(0, 3);
                   return (
                     experienceData.length > 0 && (
                       <section key={sectionName}>
@@ -103,13 +109,23 @@ export default function Home() {
                           Experience
                         </h2>
                         <div className="space-y-12">
-                          {experienceData.map((experience, index) => (
+                          {experiencesToShow.map((experience, index) => (
                             <ExperienceEntry
                               key={index}
                               experience={experience}
                             />
                           ))}
                         </div>
+                        {experienceData.length > 3 && (
+                            <button
+                            onClick={() => setShowAllExperiences(!showAllExperiences)}
+                            className="mt-8 text-sm italic font-normal text-zinc-900 hover:text-zinc-600"
+                            >
+                            {showAllExperiences
+                              ? "Hide more experiences"
+                              : `See ${experienceData.length - 3} more experiences`}
+                            </button>
+                        )}
                       </section>
                     )
                   );
