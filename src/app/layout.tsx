@@ -57,9 +57,21 @@ export default function RootLayout({
                 </p>
               )}
             </div>
+            <nav className="mb-4">
+              <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 text-sm text-neutral-500 dark:text-neutral-500">
+                        <li>
+                <Link 
+                  href="/cv" 
+                  className="underline hover:text-neutral-800 dark:hover:text-neutral-300 transition-colors"
+                >
+                  Resume
+                </Link>
+              </li>
+              </ul>
+            </nav>
             <div className="mb-4">
               <p className="text-sm text-neutral-500 dark:text-neutral-500 justify">
-                Built with{" "}
+                Inspired by{" "}
                 <a
                   href="https://github.com/tovacinni/research-website-template"
                   className="underline hover:text-neutral-800 dark:hover:text-neutral-300 transition-colors"
@@ -68,18 +80,6 @@ export default function RootLayout({
                 </a>
               </p>
             </div>
-            <nav className="mb-4">
-              <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 text-sm text-neutral-600 dark:text-neutral-400">
-                        <li>
-                <Link 
-                  href="/cv" 
-                  className="hover:text-neutral-800 dark:hover:text-neutral-300 transition-colors"
-                >
-                  CV
-                </Link>
-              </li>
-              </ul>
-            </nav>
           </div>
         </footer>
       </body>

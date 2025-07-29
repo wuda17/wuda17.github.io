@@ -28,5 +28,5 @@ export const aboutMe: AboutMe = {
   githubUsername: "wuda17",
   linkedinUsername: "wudaa",
   cvUrl: "/cv",
-  secretDescription: "I like cooking.",
+  secretDescription: "Made with love and a whole lot of butter.",
 };
