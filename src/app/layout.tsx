@@ -29,6 +29,9 @@ const ptSerif = PT_Serif({
 export const metadata: Metadata = {
   title: customMetadata.title || aboutMe.name,
   description: customMetadata.description || aboutMe.description,
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
