@@ -11,6 +11,14 @@ export interface Experience {
 
 export const experienceData: Experience[] = [
   {
+    date: "Sep 2025 - Present",
+    title: "Research Associate",
+    company: "Control Learning and Logic (CL2) Lab under <b>Professor Yash Pant</b>",
+    description: "I am working on developing fast, parallelized environment built on TORCS, and exploring Adaptive Diffusion Policies for hybrid-control problems.",
+    companyLogo: "/uw.png",
+    companyUrl: "https://yashpant.github.io/"
+    },
+  {
     date: "May 2025 - Aug 2025",
     title: "Research Intern",
     company: "dConstruct Robotics",
@@ -31,9 +39,10 @@ export const experienceData: Experience[] = [
   {
     date: "Apr 2024 - Dec 2024",
     title: "Research Associate",
-    company: "Vision and Image Processing Lab",
+    company: "Vision and Image Processing Lab under <b>Professor Paul Fieguth</b>",
     description: "Led self-supervised learning research for insect classification and engineered a scalable dataset pipeline, processing <b>5M+</b> records.",
     companyLogo: "/uw.png",
+    companyUrl: "https://vip.uwaterloo.ca/"
     },
   {
     date: "May 2023 - Aug 2023",
